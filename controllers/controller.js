@@ -1,11 +1,11 @@
 const Employee = require('../models/employee');
-
+const path = require('path');
 exports.getdefault = (req, res) => {
-    res.send('You are on the root route');
+    res.sendFile(path.resolve('controllers/countdown.html'));
 };
 
 exports.aboutus = function (req, res) {
-    res.send('You are on the about us route.');
+    res.send("You are on about us route path");
 };
 //
 exports.addweight = function (req, res) {
