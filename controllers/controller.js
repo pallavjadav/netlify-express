@@ -1,7 +1,12 @@
 const Employee = require('../models/employee');
 const path = require('path');
+const http = require('http');
+const fs = require('fs');
 exports.getdefault = (req, res) => {
-    res.sendFile(path.resolve('views/countdown.html'));
+   // res.sendFile(path.resolve('views/countdown.html'));
+   res.writeHead(200, {'Content-Type': 'text/html'});
+   let myReadStream = fs.createReadStream('views/countdown.html','utf-8');
+   myReadStream.pipe(res);
 };
 
 exports.aboutus = function (req, res) {
