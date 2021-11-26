@@ -1,7 +1,7 @@
 const Employee = require('../models/employee');
 const path = require('path');
 exports.getdefault = (req, res) => {
-    res.sendFile(path.resolve('controllers/countdown.html'));
+    res.sendFile(path.resolve('views/countdown.html'));
 };
 
 exports.aboutus = function (req, res) {
