@@ -5,8 +5,10 @@ const fs = require('fs');
 exports.getdefault = (req, res) => {
    // res.sendFile(path.resolve('views/countdown.html'));
    res.writeHead(200, {'Content-Type': 'text/html'});
-   let myReadStream = fs.createReadStream('views/countdown.html','utf-8');
-   myReadStream.pipe(res);
+//    let myReadStream = fs.createReadStream(__dirname + '/countdown.html','utf-8');
+//    myReadStream.pipe(res);
+    html = fs.readFileSync('./controllers/countdown.html');
+    res.end(html);
 };
 
 exports.aboutus = function (req, res) {
