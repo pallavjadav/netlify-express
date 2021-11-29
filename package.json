@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENC=developement ./node_modules/.bin/netlify-lambda serve src",
+    "start": "NODE_ENV=developement ./node_modules/.bin/netlify-lambda serve src",
     "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "repository": {
@@ -16,10 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
     "mongoose": "^6.0.13",
     "netlify-lambda": "^2.0.15",
-    "path": "^0.12.7",
     "serverless-http": "^2.7.0"
   }
 }
