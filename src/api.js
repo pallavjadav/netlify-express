@@ -6,6 +6,6 @@ const router = express.Router();
 routes(router);
 
 app.use(`/.netlify/functions/api`,router);
-
+app.use(express.static('../HTML'));
 module.exports = app;
 module.exports.handler = serverless(app);
