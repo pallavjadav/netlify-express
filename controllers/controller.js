@@ -11,9 +11,10 @@ exports.getdefault = (req, res) => {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 p {
-  text-align: center;
-  font-size: 10vw;
-  margin-top: 50%;
+    text-align: center;
+    font-size: 10vw;
+    top: 50%;
+    transform: translate(0, 50%);
 }
 body{
     background: aquamarine;
