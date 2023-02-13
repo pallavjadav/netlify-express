@@ -6,6 +6,7 @@ const router = express.Router();
 routes(router);
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+// comment from pallav
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
